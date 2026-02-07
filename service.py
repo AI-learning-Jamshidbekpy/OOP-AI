@@ -16,7 +16,7 @@ class ModelService:
     def train(self, X, y):
         Xp = self.preprocessor.transform(X)
         self.model.fit(Xp, y)
-        self._trained = True
+        self.__trained = True
 
 
     def infer(self, X):

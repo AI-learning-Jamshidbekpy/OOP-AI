@@ -23,12 +23,14 @@ class SklearnModel(MLModel):
     def __init__(self):
         self.is_fitted = False
 
-    def fit(self) ->None:
+    def fit(self, X, y) ->None:
         self.is_fitted = True
         return self.is_fitted
 
     def predict(self, X) -> list:
-        return [1] * X if self.is_fitted else RuntimeError("Model fit qilinmagan")
+        if self.is_fitted:
+            return [1] * X
+        raise RuntimeError("Model fit qilinmagan")
 
     
     @classmethod
@@ -42,7 +44,7 @@ class TorchModel(MLModel):
     def __init__(self, threshold=0.5):
         self.threshold = threshold
 
-    def fit(self) ->None:
+    def fit(self, X, y) ->None:
         pass
 
     def predict(self, X) -> list:
@@ -62,7 +64,7 @@ class TorchModel(MLModel):
 
 class RuleBasedModel(MLModel):
 
-    def fit(self) ->None:
+    def fit(self, X, y) ->None:
         pass
 
     def predict(self, X) -> list:
