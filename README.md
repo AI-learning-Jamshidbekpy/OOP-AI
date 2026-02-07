@@ -134,3 +134,5 @@ Bu baho faqat OOP talablari va struktura bo‘yicha berildi (ABC, inheritance, c
 - `infer`ni `train`dan oldin chaqirib error tekshirish
 - `TorchModel.normalize([10, 10, 10])` ni tekshirish
 - `RuleBasedModel`ni `ModelService` bilan sinash
+
+Cursorning GPT modeli yordamida baholandi.
